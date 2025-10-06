@@ -1,130 +1,156 @@
-// 1️⃣ ১ থেকে ১০ পর্যন্ত সংখ্যা প্রিন্ট করো
+// Task: 01
 for (let i = 1; i <= 10; i++) {
   console.log(i);
 }
 
-// 2️⃣ ১ থেকে n পর্যন্ত সংখ্যা প্রিন্ট করো
-let n = 7;
+// Task: 02
+let n = parseInt(prompt("Enter a number: "));
+
 for (let i = 1; i <= n; i++) {
   console.log(i);
 }
 
-// 3️⃣ ১ থেকে n পর্যন্ত সংখ্যার যোগফল বের করো
-n = 5;
+// Task: 03
+let num = parseInt(prompt("Enter a number: "));
 let sum = 0;
-for (let i = 1; i <= n; i++) {
+
+for (let i = 1; i <= num; i++) {
   sum += i;
 }
-console.log("Sum =", sum);
 
-// 4️⃣ ১ থেকে ১০০ পর্যন্ত সব জোড় সংখ্যা প্রিন্ট করো
-for (let i = 2; i <= 100; i += 2) {
-  console.log(i);
+console.log("Sum is:", sum);
+
+// Task: 04
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
 }
 
-// 5️⃣ ১ থেকে ১০০ পর্যন্ত সব বিজোড় সংখ্যা প্রিন্ট করো
-for (let i = 1; i <= 100; i += 2) {
-  console.log(i);
+// Task: 05
+for (let i = 1; i <= 100; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
 }
 
-// 6️⃣ গুণের নামতা প্রিন্ট করো
-let num = 5;
+// Task: 06
+let number = parseInt(prompt("Enter a number: "));
+
 for (let i = 1; i <= 10; i++) {
-  console.log(`${num} × ${i} = ${num * i}`);
+  console.log(`${number} × ${i} = ${number * i}`);
 }
 
-// 7️⃣ Factorial বের করো (n!)
-n = 5;
-let fact = 1;
-for (let i = 1; i <= n; i++) {
-  fact *= i;
-}
-console.log("Factorial =", fact);
+// Task: 07
+let factorialNumber = parseInt(prompt("Enter a number: "));
+let factorial = 1;
 
-// 8️⃣ Reverse Number Printing (n → 1)
-n = 10;
-for (let i = n; i >= 1; i--) {
+for (let i = 1; i <= factorialNumber; i++) {
+  factorial *= i;
+}
+
+console.log("Factorial:", factorial);
+
+// Task: 08
+let revNum = parseInt(prompt("Enter a number: "));
+
+for (let i = revNum; i >= 1; i--) {
   console.log(i);
 }
 
-// 9️⃣ ১ থেকে n পর্যন্ত সব জোড় সংখ্যার যোগফল
-n = 10;
-sum = 0;
-for (let i = 2; i <= n; i += 2) {
-  sum += i;
-}
-console.log("Even Sum =", sum);
+// Task: 09
+let evenOfSumNum = parseInt(prompt("Enter a number:"));
+let evenSum = 0;
 
-// 🔟 ১ থেকে ৫০ পর্যন্ত ৩ দিয়ে বিভাজ্য সব সংখ্যা
+for (let i = 1; i <= evenOfSumNum; i++) {
+  if (i % 2 === 0) {
+    evenSum += i;
+  }
+}
+
+console.log("Sum of even numbers:", evenSum);
+
+// Task: 10
 for (let i = 1; i <= 50; i++) {
   if (i % 3 === 0) {
     console.log(i);
   }
 }
 
-// 11️⃣ String Length বের করো (str.length ছাড়া)
-let str = "hello";
-let count = 0;
-for (let i = 0; str[i] !== undefined; i++) {
-  count++;
-}
-console.log("Length =", count);
+// Task: 11
+let str = "My Name is Sheikh Jabed";
+let length = 0;
 
-// 12️⃣ Count Vowels and Consonants
-str = "programming";
-let vowels = 0,
-  consonants = 0;
-let vowelList = "aeiouAEIOU";
-for (let i = 0; i < str.length; i++) {
-  let ch = str[i];
-  if (vowelList.indexOf(ch) !== -1) {
-    vowels++;
-  } else if ((ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z")) {
-    consonants++;
+for (let char of str) {
+  length++;
+}
+
+console.log("Length is:", length);
+
+// Task: 12
+let text = "JavaScript Programming";
+let vowelsCount = 0;
+let consonantsCount = 0;
+
+for (let char of text.toLowerCase()) {
+  if ("aeiou".includes(char)) {
+    vowelsCount++;
+  } else if (char >= "a" && char <= "z") {
+    consonantsCount++;
   }
 }
-console.log("Vowels =", vowels);
-console.log("Consonants =", consonants);
 
-// 13️⃣ Reverse a String
-str = "hello";
-let reverse = "";
-for (let i = str.length - 1; i >= 0; i--) {
-  reverse += str[i];
-}
-console.log("Reversed =", reverse);
+console.log("Vowels:", vowelsCount, "Consonants:", consonantsCount);
 
-// 14️⃣ Palindrome Checker
-str = "madam";
-reverse = "";
-for (let i = str.length - 1; i >= 0; i--) {
-  reverse += str[i];
+// Task: 13
+let originalStr = "hello";
+let reversedStr = "";
+
+for (let i = originalStr.length - 1; i >= 0; i--) {
+  reversedStr += originalStr[i];
 }
-if (str === reverse) {
+
+console.log("Reversed:", reversedStr);
+
+// Task: 14
+let palindromeStr = "madam";
+let reversed = "";
+
+for (let i = palindromeStr.length - 1; i >= 0; i--) {
+  reversed += palindromeStr[i];
+}
+
+if (palindromeStr === reversed) {
   console.log("Palindrome");
 } else {
   console.log("Not Palindrome");
 }
 
-// 15️⃣ Count Spaces in a Sentence
+// Task: 15
 let sentence = "I love programming";
-let spaces = 0;
-for (let i = 0; i < sentence.length; i++) {
-  if (sentence[i] === " ") {
-    spaces++;
-  }
-}
-console.log("Spaces =", spaces);
+let spaceCount = 0;
 
-// 16️⃣ Find Character Frequency
-str = "banana";
-let freq = {};
-for (let i = 0; i < str.length; i++) {
-  let ch = str[i];
-  if (freq[ch]) {
-    freq[ch]++;
-  } else {
-    freq[ch] = 1;
+for (let char of sentence) {
+  if (char === " ") {
+    spaceCount++;
   }
 }
-console.log(freq);
+
+console.log("Spaces:", spaceCount);
+
+// Task: 16
+let fruit = "banana";
+let charCount = {};
+
+for (let char of fruit) {
+  charCount[char] = (charCount[char] || 0) + 1;
+}
+
+console.log("Character frequency:", charCount);
+
+// Task: 17
+let nameStr = "Naeeim";
+
+for (let char of nameStr) {
+  console.log(char);
+}
